@@ -24,6 +24,9 @@ Example 3:
 
 >>> Solution().isIsomorphic("paper","title")
 True
+
+>>> Solution().isIsomorphic("bbbaaaba","aaabbbba")
+False
 """
 import doctest
 
