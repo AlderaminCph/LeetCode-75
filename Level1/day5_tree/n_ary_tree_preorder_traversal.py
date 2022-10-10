@@ -30,4 +30,17 @@ class Node:
 
 class Solution:
     def preorder(self, root: "Node") -> List[int]:
-        """ """
+        """
+        Recursive solution
+        """
+        output = []
+
+        def dfs(node: "Node") -> None:
+            if not node:
+                return
+            output.append(node.val)
+            for child in node.children:
+                dfs(child)
+
+        dfs(root)
+        return output
