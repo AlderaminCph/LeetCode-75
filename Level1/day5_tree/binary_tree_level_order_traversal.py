@@ -20,7 +20,7 @@ Input: root = []
 Output: []
 """
 from typing import Optional, List
-from collections import dequeue
+from collections import deque
 
 
 class TreeNode:
@@ -37,7 +37,7 @@ class Solution:
         BFS algorithm with queue
         """
         result = []
-        q = dequeue()
+        q = deque()
         q.append(root)
 
         # perform BFS
