@@ -14,20 +14,16 @@ Return true if n is a happy number, and false if not.
 
 
 Example 1:
+>>> Solution().isHappy(19)
+True
 
-Input: n = 19
-Output: true
-Explanation:
-1^2 + 9^2 = 82
-8^2 + 2^2 = 68
-6^2 + 8^2 = 100
-1^2 + 0^2 + 0^2 = 1
 
 Example 2:
 
-Input: n = 2
-Output: false
+>>> Solution().isHappy(2)
+False
 """
+import doctest
 
 
 class Solution:
@@ -48,3 +44,6 @@ class Solution:
             res += digit
             n = n // 10
         return res
+
+
+doctest.testmod()
