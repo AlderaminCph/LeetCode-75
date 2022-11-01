@@ -28,7 +28,7 @@ class Solution:
         nums = []
 
         while head:
-            nums.appen(head.val)
+            nums.append(head.val)
             head = head.next
 
         left, right = 0, len(nums) - 1
