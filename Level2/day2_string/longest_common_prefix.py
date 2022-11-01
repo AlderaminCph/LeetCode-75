@@ -17,6 +17,10 @@ Example 2:
 ''
 
 Explanation: There is no common prefix among the input strings.
+
+>>> Solution().longestCommonPrefix(["flower","flower","flower","flower"])
+'flower'
+
 """
 from typing import List
 import doctest
@@ -24,19 +28,13 @@ import doctest
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        right = 1
-        prefix = strs[0][0:right]
-        while right < len(strs) - 1:
-
+        res = ""
+        for i in range(len(strs[0])):
             for string in strs:
-                if string[0] != strs[0][0]:
-                    return ""
-                if string[0:right] != prefix:
-                    return prefix[:-1]
-                else:
-                    right += 1
-                    prefix = strs[0][0:right]
-        return prefix
+                if i == len(string) or string[i] != strs[0][i]:
+                    return res
+            res += strs[0][i]
+        return res
 
 
 doctest.testmod()
